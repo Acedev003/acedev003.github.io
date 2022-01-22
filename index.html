@@ -4,6 +4,13 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
     </head>
     <body>        
-        Test
+        <div id="particles-js"></div>
+        <script src="assets/js/particles.min.js"></script>
+        <script>
+            particlesJS.load('particles-js', "assets/particle_config.json", function() 
+            {
+                console.log('callback - particles.js config loaded');
+            });
+        </script>
     </body>
 </html>
