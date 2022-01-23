@@ -109,4 +109,4 @@ let params = {
     "retina_detect": true 
 }
 
-particlesJS('particles-js', params, function() {console.log('particles loaded');});
+particlesJS('particles-js', params);
