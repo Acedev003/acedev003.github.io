@@ -36,7 +36,7 @@ let params = {
         }
       },
       "size": {
-        "value": 10,
+        "value": 3,
         "random": true,
         "anim": {
           "enable": false,
@@ -95,7 +95,7 @@ let params = {
           "speed": 3
         },
         "repulse": {
-          "distance": 400,
+          "distance": 200,
           "duration": 0.4
         },
         "push": {
