@@ -91,3 +91,12 @@ body {
   from, to { border-color: transparent }
   50% { border-color: orange }
 }
+
+
+.project-panel
+{
+  position: absolute;
+  min-width: 100%;
+  background-color: transparent;
+  top: 0 auto;
+}
