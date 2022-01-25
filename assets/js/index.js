@@ -110,12 +110,38 @@ let params = {
 }
 particlesJS('particles-js', params);
 
+let urls_list = []
+
 let center_block   = document.getElementById("center_block");
 let project_button = document.getElementById("projects_button");
 
-let open_projects  = function()
+let networkcall = (url,object) => 
+                         {
+                           let xhr = new XMLHttpRequest();
+
+                           xhr.onload =  () =>
+                           {
+                            if (xhr.status >= 200 && xhr.status < 400) 
+                            {
+                              console.log(JSON.parse(xhr.responseText));
+                              return;
+                            }
+                            console.log("Something went wrong!");
+                          };
+                          
+                          xhr.onerror = function () 
+                          {
+                            console.log("Something went wrong!");
+                          };
+
+                          xhr.open("GET",url);
+                          xhr.send();
+                         }
+
+let open_projects  = () =>
                      {
                        center_block.classList.add("fade-left")  
+                       networkcall("https://api.github.com/users/acedev003/repos?type=owner")
                      }; 
 
 project_button.onclick = open_projects;
