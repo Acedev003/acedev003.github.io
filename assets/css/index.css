@@ -26,6 +26,33 @@ body {
   min-width: 100%;
 }
 
+.center
+{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .titlefont{
   font-family: "Fira Code","normal";
+}
+
+.fade-left
+{
+  animation-name: fadeOutLeft;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeOutLeft
+{
+  from{
+    opacity:1;
+  }
+  to{
+    left:10px;
+    opacity:0;
+  }
 }
