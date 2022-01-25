@@ -108,5 +108,14 @@ let params = {
     },
     "retina_detect": true 
 }
-
 particlesJS('particles-js', params);
+
+let center_block   = document.getElementById("center_block");
+let project_button = document.getElementById("projects_button");
+
+let open_projects  = function()
+                     {
+                       center_block.classList.add("fade-left")  
+                     }; 
+
+project_button.onclick = open_projects;
