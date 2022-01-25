@@ -6,7 +6,6 @@ html
 body {
   margin: 0;
   height: 100%;
-  font:normal 75% Arial, Helvetica, sans-serif;
 }
 
 #particles-js {
@@ -25,4 +24,8 @@ body {
   display: block;
   min-height: 100%;
   min-width: 100%;
+}
+
+.codefont{
+  font-family: "Fira Code","normal";
 }
