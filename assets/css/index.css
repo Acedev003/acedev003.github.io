@@ -40,22 +40,58 @@ body {
   font-family: "Fira Code","normal";
 }
 
+
+.project-panel
+{
+  display: none;
+  position: absolute;
+  min-width: 100%;
+  background-color: transparent;
+  top: 0 auto;
+  opacity: 0;
+}
+
 .fade-left
 {
   animation-name: fadeOutLeft;
-  animation-duration: 4s;
+  animation-duration: 3s;
   animation-delay: 0.2s;
   animation-fill-mode: both;
 }
 
 @keyframes fadeOutLeft
 {
-  from{
+  0%{
     opacity:1;
   }
-  to{
+  99%{
     left:10px;
     opacity:0;
+  }
+  100%{
+    display: none;
+    left:0px;
+    opacity:0;
+    visibility: hidden;
+  }
+}
+
+.fade-out
+{
+  animation-name: fadeOut;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  display: block;
+}
+
+@keyframes fadeOut
+{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
   }
 }
 
@@ -92,11 +128,3 @@ body {
   50% { border-color: orange }
 }
 
-
-.project-panel
-{
-  position: absolute;
-  min-width: 100%;
-  background-color: transparent;
-  top: 0 auto;
-}
