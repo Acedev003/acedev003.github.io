@@ -110,7 +110,60 @@ let params = {
 }
 particlesJS('particles-js', params);
 
+class Table
+{
+  #cell_count = 0;
+  #div
+  #max_cell_per_row = 3;
+  
+  constructor(parent_id)
+  {
+
+    this.#div  = document.createElement("div");
+    this.#div.classList.add("w3-row","w3-padding");
+    
+    let parent = document.getElementById(parent_id);
+    parent.appendChild(this.#div);
+ 
+  }
+
+  get_cellCount()
+  {
+    return this.#cell_count;
+  }
+
+  reset()
+  {
+    this.#cell_count = 0;
+  }
+
+  add()
+  {
+    let cell_count = this.#cell_count;
+    let parent     = this.#div;
+
+    let child = document.createElement("div");
+    child.classList.add("w3-col","s12","m6","l4","w3-padding");
+
+    let card = document.createElement("div");
+    card.classList.add("w3-card-4");
+    card.innerText = "Hi";
+
+    child.appendChild(card);
+
+    parent.appendChild(child);
+
+  }
+
+}
+
 let urls_list = []
+
+let table = new Table("project_holder");
+table.add();
+table.add();
+table.add();
+table.add();
 
 let center_block   = document.getElementById("center_block");
 let project_button = document.getElementById("projects_button");
