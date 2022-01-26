@@ -146,7 +146,7 @@ class Table
     child.classList.add("w3-col","s12","m6","l4","w3-padding");
 
     let card = document.createElement("div");
-    card.classList.add("w3-card-4"),"w3-red";
+    card.classList.add("w3-card-4","w3-red");
     card.innerText = "Hi";
 
     child.appendChild(card);
