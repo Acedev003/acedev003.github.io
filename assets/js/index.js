@@ -167,6 +167,7 @@ table.add();
 
 let center_block   = document.getElementById("center_block");
 let project_button = document.getElementById("projects_button");
+let project_panel  = document.getElementById("project_panel");
 
 let networkcall = (url,object) => 
                          {
@@ -194,6 +195,7 @@ let networkcall = (url,object) =>
 let open_projects  = () =>
                      {
                        center_block.classList.add("fade-left")  
+                       project_panel.classList.add("fade-out")  
                        networkcall("https://api.github.com/users/acedev003/repos?type=owner")
                      }; 
 
