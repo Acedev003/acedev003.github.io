@@ -36,6 +36,12 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.rightpad
+{
+  position: absolute;
+  padding-right: 10px;
+}
+
 .titlefont{
   font-family: "Fira Code","normal";
 }
@@ -95,6 +101,28 @@ body {
   }
 }
 
+.fade-in
+{
+  animation-name: fadeIn;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  display: block;
+}
+
+@keyframes fadeIn
+{
+  0%{
+    opacity: 1;
+  }
+  99%{
+    opacity: 0;
+  }
+  100%{
+    display: none;
+    visibility: hidden;
+  }
+}
 
 /*****************************************************************
 *
