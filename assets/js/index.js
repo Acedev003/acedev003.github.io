@@ -167,6 +167,7 @@ table.add();
 
 let center_block   = document.getElementById("center_block");
 let project_button = document.getElementById("projects_button");
+let project_close  = document.getElementById("project_close");
 let project_panel  = document.getElementById("project_panel");
 
 let networkcall = (url,object) => 
@@ -194,9 +195,20 @@ let networkcall = (url,object) =>
 
 let open_projects  = () =>
                      {
-                       center_block.classList.add("fade-left")  
-                       project_panel.classList.add("fade-out")  
-                       networkcall("https://api.github.com/users/acedev003/repos?type=owner")
+                       center_block.classList.add("fade-left");
+                       project_panel.classList.add("fade-out");
+                       center_block.classList.remove("fade-out");  
+                       project_panel.classList.remove("fade-in");  
+                       networkcall("https://api.github.com/users/acedev003/repos?type=owner");
                      }; 
 
+let close_projects = () =>
+                     {
+                      center_block.classList.add("fade-out");
+                      project_panel.classList.add("fade-in");
+                      center_block.classList.remove("fade-left");
+                      project_panel.classList.remove("fade-out");  
+                     };
+
 project_button.onclick = open_projects;
+project_close.onclick  = close_projects;
