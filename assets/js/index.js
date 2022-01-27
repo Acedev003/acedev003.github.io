@@ -1,14 +1,14 @@
 let params = {
     "particles": {
       "number": {
-        "value": 30,
+        "value": 60,
         "density": {
           "enable": true,
           "value_area": 800
         }
       },
       "color": {
-        "value": "#7e8d85"
+        "value": "#ffffff"
       },
       "shape": {
         "type": "circle",
@@ -26,28 +26,28 @@ let params = {
         }
       },
       "opacity": {
-        "value": 0.5,
+        "value": 0.7,
         "random": false,
         "anim": {
           "enable": false,
           "speed": 1,
           "opacity_min": 0.1,
-          "sync": false
+          "sync": true
         }
       },
       "size": {
         "value": 3,
         "random": true,
         "anim": {
-          "enable": false,
-          "speed": 80,
+          "enable": true,
+          "speed": 8,
           "size_min": 0.1,
           "sync": false
         }
       },
       "line_linked": {
         "enable": true,
-        "distance": 300,
+        "distance": 150,
         "color": "#ffffff",
         "opacity": 0.4,
         "width": 2
@@ -68,7 +68,7 @@ let params = {
       }
     },
     "interactivity": {
-      "detect_on": "canvas",
+      "detect_on": "window",
       "events": {
         "onhover": {
           "enable": true,
@@ -95,7 +95,7 @@ let params = {
           "speed": 3
         },
         "repulse": {
-          "distance": 200,
+          "distance": 100,
           "duration": 0.4
         },
         "push": {
