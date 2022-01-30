@@ -170,6 +170,8 @@ let project_button = document.getElementById("projects_button");
 let project_close  = document.getElementById("project_close");
 let project_panel  = document.getElementById("project_panel");
 
+let back_set = false;
+
 let networkcall = (url,object) => 
                          {
                            let xhr = new XMLHttpRequest();
@@ -195,6 +197,13 @@ let networkcall = (url,object) =>
 
 let open_projects  = () =>
                      {
+                       if(!back_set)
+                       {
+                         history.pushState(null, null, window.location.href);
+                         history.back();
+                         back_set = true;
+                       }
+                       window.onpopstate = () => {history.forward();close_projects();};
                        center_block.classList.add("fade-left");
                        project_panel.classList.add("fade-out");
                        center_block.classList.remove("fade-out");  
@@ -204,6 +213,8 @@ let open_projects  = () =>
 
 let close_projects = () =>
                      {
+                      window.onpopstate = null;
+                      history.back(); 
                       center_block.classList.add("fade-out");
                       project_panel.classList.add("fade-in");
                       center_block.classList.remove("fade-left");
