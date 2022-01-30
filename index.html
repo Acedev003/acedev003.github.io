@@ -1,1 +1,44 @@
-- Test Page
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Acedev003</title>
+        <link href="assets/css/index.css" rel="stylesheet">
+        <link href="assets/css/w3.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>        
+        <div class="panel background-div">
+            <div id="particles-js"></div>
+        </div>
+
+        <div class="w3-center center" id="center_block">
+                <h1 class="w3-jumbo titlefont typewriter">&lt;Acedev003&gt;<h1>
+                <button class="w3-button w3-large w3-round-large" id="projects_button">
+                    My Projects 
+                    <i class="material-icons" style="vertical-align: middle;">navigate_next</i>
+                </button>
+                <div class="w3-padding w3-xlarge ">
+                    <a href="#" target="_blank"><i class="fa fa-book w3-margin"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-linkedin w3-margin"></i></a>
+                    <a href="https://twitter.com/Acedev003" target="_blank"><i class="fa fa-twitter w3-margin"></i></a>
+                    <a href="https://github.com/Acedev003" target="_blank"><i class="fa fa-github w3-margin"></i></a>
+                  </div>
+        </div>
+        
+        <div class="project-panel" id="project_panel">
+
+            <div class="w3-panel w3-margin w3-round-large w3-transparent w3-padding w3-display-container">
+                  <div class="w3-padding w3-display-right w3-btn w3-ripple" id ="project_close"><i class="material-icons" style="vertical-align: middle;color: #fff;">close</i></div>
+            </div>
+
+            <div class="w3-row" id="project_holder"></div>
+
+        </div>
+        
+        <script src="assets/js/particles.min.js"></script>
+        <script src="assets/js/index.js"></script>
+    </body>
+</html>
