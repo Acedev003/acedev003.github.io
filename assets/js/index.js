@@ -200,10 +200,16 @@ let open_projects  = () =>
                        if(!back_set)
                        {
                          history.pushState(null, null, window.location.href);
-                         history.back();
                          back_set = true;
                        }
-                       window.onpopstate = () => {history.forward();close_projects();};
+                       window.onpopstate = () => {
+                                                    if(back_set)
+                                                    {
+                                                      history.forward();
+                                                      close_projects();
+                                                    }
+                                                  };
+
                        center_block.classList.add("fade-left");
                        project_panel.classList.add("fade-out");
                        center_block.classList.remove("fade-out");  
@@ -214,7 +220,6 @@ let open_projects  = () =>
 let close_projects = () =>
                      {
                       window.onpopstate = null;
-                      history.back(); 
                       center_block.classList.add("fade-out");
                       project_panel.classList.add("fade-in");
                       center_block.classList.remove("fade-left");
