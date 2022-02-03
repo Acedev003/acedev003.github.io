@@ -1,7 +1,7 @@
 let params = {
     "particles": {
       "number": {
-        "value": 60,
+        "value": 100,
         "density": {
           "enable": true,
           "value_area": 800
@@ -113,18 +113,12 @@ particlesJS('particles-js', params);
 class Table
 {
   #cell_count = 0;
-  #div
-  #max_cell_per_row = 3;
+  #div;
+  #parentid;
   
   constructor(parent_id)
   {
-
-    this.#div  = document.createElement("div");
-    this.#div.classList.add("w3-row","w3-padding");
-    
-    let parent = document.getElementById(parent_id);
-    parent.appendChild(this.#div);
- 
+    this.#parentid = parent_id;
   }
 
   get_cellCount()
@@ -132,26 +126,65 @@ class Table
     return this.#cell_count;
   }
 
+  create()
+  {
+    this.#div  = document.createElement("div");
+    this.#div.classList.add("w3-row","w3-padding");
+    
+    let parent = document.getElementById(this.#parentid);
+    parent.appendChild(this.#div);
+  }
+
   reset()
   {
     this.#cell_count = 0;
+    let parent = this.#div;
+    parent.classList.add("conceal-fast");
+    setTimeout(this.remove,3000,parent);
   }
 
-  add()
+  remove(parent)
   {
-    let cell_count = this.#cell_count;
+    parent.remove();
+  }
+
+  add(title_txt,description,prj_link,img_link,font_color)
+  {
     let parent     = this.#div;
 
+    let anchor  = document.createElement("a");
+    anchor.href = prj_link;
+    anchor.target = "_blank";
+    anchor.style.color = font_color;
+    anchor.classList.add("w3-col","s12","m6","l4"); 
+
     let child = document.createElement("div");
-    child.classList.add("w3-col","s12","m6","l4","w3-padding");
+    child.classList.add("w3-card-4","w3-margin");
 
-    let card = document.createElement("div");
-    card.classList.add("w3-card-4","w3-red");
-    card.innerText = "Hi";
+    let container = document.createElement("div");
+    container.classList.add("w3-display-container","w3-large");
 
-    child.appendChild(card);
+    let bg_img = document.createElement("img");
+    bg_img.src = img_link;
+    bg_img.classList.add("w3-image","w3-round-xlarge");
 
-    parent.appendChild(child);
+    let title       = document.createElement("p");
+    title.innerText = title_txt;
+    title.classList.add("w3-display-topleft","w3-padding");
+
+    let subtitle       = document.createElement("p");
+    subtitle.innerText = description;
+    subtitle.classList.add("w3-display-bottomleft","w3-padding");
+
+    container.appendChild(bg_img);
+    container.appendChild(title);
+    container.appendChild(subtitle);
+
+    child.appendChild(container);
+
+    anchor.appendChild(child);
+
+    parent.appendChild(anchor);
 
   }
 
@@ -159,11 +192,8 @@ class Table
 
 let urls_list = []
 
+
 let table = new Table("project_holder");
-table.add();
-table.add();
-table.add();
-table.add();
 
 let center_block   = document.getElementById("center_block");
 let project_button = document.getElementById("projects_button");
@@ -172,28 +202,34 @@ let project_panel  = document.getElementById("project_panel");
 
 let back_set = false;
 
-let networkcall = (url,object) => 
+let networkcall = (url) => 
                          {
+                           table.create();
                            let xhr = new XMLHttpRequest();
-
                            xhr.onload =  () =>
                            {
                             if (xhr.status >= 200 && xhr.status < 400) 
                             {
-                              console.log(JSON.parse(xhr.responseText));
+                              let json = JSON.parse(xhr.responseText);
+                              for(let i = 0 ;i < json.length;i++)
+                              {
+                                table.add(json[i].title,json[i].description,json[i].link,json[i].img_link,json[i].font_color);
+                              }
                               return;
                             }
                             console.log("Something went wrong!");
+                            alert("Request Failed! Kindly refresh page");
                           };
                           
                           xhr.onerror = function () 
                           {
                             console.log("Something went wrong!");
+                            alert("Request Failed! Kindly refresh page");
                           };
 
                           xhr.open("GET",url);
                           xhr.send();
-                         }
+                        }
 
 let open_projects  = () =>
                      {
@@ -214,12 +250,13 @@ let open_projects  = () =>
                        project_panel.classList.add("fade-out");
                        center_block.classList.remove("fade-out");  
                        project_panel.classList.remove("fade-in");  
-                       networkcall("https://api.github.com/users/acedev003/repos?type=owner");
+                       networkcall("assets/projects/projects.json");
                      }; 
 
 let close_projects = () =>
                      {
                       window.onpopstate = null;
+                      table.reset();
                       center_block.classList.add("fade-out");
                       project_panel.classList.add("fade-in");
                       center_block.classList.remove("fade-left");
