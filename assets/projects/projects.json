@@ -1,9 +1,23 @@
 [
     {
         "title":"Flashlight with Shake",
-        "description":"sad sad dfsdf  gdf sdf sdf s fsd ",
+        "description":"Access the flashlight of your device through this app, which gives you the ability to control your device's flash through a shake.",
         "link":"https://play.google.com/store/apps/details?id=com.acedevelopers.flashlight",
-        "img_link":"https://cdn.pixabay.com/photo/2017/03/28/22/55/night-photograph-2183637__480.jpg",
+        "img_link":"assets/projects/images/flashlightwithshake.png",
         "font_color":"#fff"
+    },
+    {
+        "title":"Mars Weather",
+        "description":"Get the latest weather reports from the Red planet, with data from Insight,Curiosity and the Perseverance rovers.",
+        "link":"https://play.google.com/store/apps/details?id=com.acedev003.marsweather",
+        "img_link":"assets/projects/images/marsweather.png",
+        "font_color":"#fff"
+    },
+    {
+        "title":"URL Shortener",
+        "description":"Shorten down large links using multiple shortening services and share URL's as simple QR codes.",
+        "link":"https://play.google.com/store/apps/details?id=com.acedev003.urlshorteners",
+        "img_link":"assets/projects/images/urlshortener.png",
+        "font_color":"#000"
     }
 ]
