@@ -1,7 +1,7 @@
 let params = {
     "particles": {
       "number": {
-        "value": 100,
+        "value": 80,
         "density": {
           "enable": true,
           "value_area": 800
@@ -156,28 +156,43 @@ class Table
     anchor.href = prj_link;
     anchor.target = "_blank";
     anchor.style.color = font_color;
-    anchor.classList.add("w3-col","s12","m6","l4"); 
+    anchor.classList.add("w3-col","s12","m6","l4","w3-padding"); 
 
     let child = document.createElement("div");
-    child.classList.add("w3-card-4","w3-margin");
+    child.classList.add("w3-card-4","w3-round-xlarge",);
+    child.style.display = "inline-block";
+    child.style.overflow = "hidden";
+    child.style.position = "relative";
+    child.style.width = "100%";
 
     let container = document.createElement("div");
-    container.classList.add("w3-display-container","w3-large");
+    container.classList.add("w3-large");
+    container.style.marginBottom = "16px";
 
     let bg_img = document.createElement("img");
     bg_img.src = img_link;
-    bg_img.classList.add("w3-image","w3-round-xlarge");
+    bg_img.classList.add("w3-round-xlarge");
+    bg_img.style.pointerEvents = "none";
+    bg_img.style.position = "absolute";
+    bg_img.style.height = "100%";
+    bg_img.style.width = "100%";
+    bg_img.style.zIndex = -1;
 
-    let title       = document.createElement("p");
+    let title       = document.createElement("div");
     title.innerText = title_txt;
-    title.classList.add("w3-display-topleft","w3-padding");
+    title.style.paddingLeft = "16px";
+
+    let br1          = document.createElement("br");
+    let br2          = document.createElement("br");
 
     let subtitle       = document.createElement("p");
     subtitle.innerText = description;
-    subtitle.classList.add("w3-display-bottomleft","w3-padding");
+    subtitle.classList.add("w3-padding");
 
     container.appendChild(bg_img);
+    container.appendChild(br1);
     container.appendChild(title);
+    container.appendChild(br2);
     container.appendChild(subtitle);
 
     child.appendChild(container);
