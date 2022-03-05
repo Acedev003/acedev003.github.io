@@ -19,5 +19,12 @@
         "link":"https://play.google.com/store/apps/details?id=com.acedev003.urlshortener",
         "img_link":"assets/projects/images/urlshortener.png",
         "font_color":"#fff"
+    },
+    {
+        "title":"Create Ascii",
+        "description":"Simple python module from creating cool ascii effects from images",
+        "link":"https://github.com/Acedev003/create_ascii",
+        "img_link":"assets/projects/images/ascii.png",
+        "font_color":"#fff"
     }
 ]
