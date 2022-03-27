@@ -156,6 +156,7 @@ class Table
     anchor.href = prj_link;
     anchor.target = "_blank";
     anchor.style.color = font_color;
+    anchor.style.height = '300px';
     anchor.classList.add("w3-col","s12","m6","l4","w3-padding"); 
 
     let child = document.createElement("div");
@@ -164,6 +165,7 @@ class Table
     child.style.overflow = "hidden";
     child.style.position = "relative";
     child.style.width = "100%";
+    child.style.height = "250px";
 
     let container = document.createElement("div");
     container.classList.add("w3-large");
