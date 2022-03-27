@@ -26,5 +26,13 @@
         "link":"https://github.com/Acedev003/create_ascii",
         "img_link":"assets/projects/images/ascii.png",
         "font_color":"#fff"
+    },
+    {
+        "title":"Digit Recognizer",
+        "description":"Webapp that recognizes handwritten digits using tfjs",
+        "link":"https://github.com/Acedev003/digit_recognizer",
+        "img_link":"assets/projects/images/mnist.png",
+        "font_color":"#fff"
+
     }
 ]
