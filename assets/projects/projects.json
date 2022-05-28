@@ -30,7 +30,7 @@
     {
         "title":"Digit Recognizer",
         "description":"Webapp that recognizes handwritten digits using tfjs",
-        "link":"https://github.com/Acedev003/digit_recognizer",
+        "link":"https://acedev003.github.io/digit_recognizer/",
         "img_link":"assets/projects/images/mnist.png",
         "font_color":"#fff"
     },
