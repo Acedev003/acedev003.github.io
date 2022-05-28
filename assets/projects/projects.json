@@ -33,6 +33,12 @@
         "link":"https://github.com/Acedev003/digit_recognizer",
         "img_link":"assets/projects/images/mnist.png",
         "font_color":"#fff"
-
+    },
+    {
+        "title":"Hexdump",
+        "description":"Hexdump utility for windows and linux, programmed in C",
+        "link":"https://github.com/Acedev003/hexdump",
+        "img_link":"assets/projects/images/hexdump.png",
+        "font_color":"#fff"
     }
 ]
