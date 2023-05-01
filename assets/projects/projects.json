@@ -40,5 +40,12 @@
         "link":"https://github.com/Acedev003/hexdump",
         "img_link":"assets/projects/images/hexdump.png",
         "font_color":"#fff"
+    },
+    {
+        "title":"PSNR",
+        "description":"An online tool for comparing PSNR metrics of 2 images",
+        "link":"https://acedev003.github.io/PSNR/",
+        "img_link":"assets/projects/images/psnr.jpg",
+        "font_color":"#fff"
     }
 ]
