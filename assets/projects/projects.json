@@ -1,5 +1,33 @@
 [
     {
+        "title":"Digit Recognizer",
+        "description":"Webapp that recognizes handwritten digits using tfjs",
+        "link":"https://acedev003.github.io/digit_recognizer/",
+        "img_link":"assets/projects/images/mnist.png",
+        "font_color":"#fff"
+    },
+    {
+        "title":"ImDenoise",
+        "description":"Fix and remove grains/noise artifacts from images using AI",
+        "link":"https://github.com/Acedev003/ImDenoise/",
+        "img_link":"assets/projects/images/imdenoise.jpg",
+        "font_color":"#fff"
+    },
+    {
+        "title":"PSNR",
+        "description":"An online tool for comparing PSNR metrics of 2 images",
+        "link":"https://acedev003.github.io/PSNR/",
+        "img_link":"assets/projects/images/psnr.jpg",
+        "font_color":"#fff"
+    },
+    {
+        "title":"Hexdump",
+        "description":"Hexdump utility for windows and linux, programmed in C",
+        "link":"https://github.com/Acedev003/hexdump",
+        "img_link":"assets/projects/images/hexdump.png",
+        "font_color":"#fff"
+    },
+    {
         "title":"Flashlight with Shake",
         "description":"Access the flashlight of your device through this app, which gives you the ability to control your device's flash through a shake.",
         "link":"https://play.google.com/store/apps/details?id=com.acedevelopers.flashlight",
@@ -25,27 +53,6 @@
         "description":"Simple python module for creating cool ascii effects from images",
         "link":"https://github.com/Acedev003/create_ascii",
         "img_link":"assets/projects/images/ascii.png",
-        "font_color":"#fff"
-    },
-    {
-        "title":"Digit Recognizer",
-        "description":"Webapp that recognizes handwritten digits using tfjs",
-        "link":"https://acedev003.github.io/digit_recognizer/",
-        "img_link":"assets/projects/images/mnist.png",
-        "font_color":"#fff"
-    },
-    {
-        "title":"Hexdump",
-        "description":"Hexdump utility for windows and linux, programmed in C",
-        "link":"https://github.com/Acedev003/hexdump",
-        "img_link":"assets/projects/images/hexdump.png",
-        "font_color":"#fff"
-    },
-    {
-        "title":"PSNR",
-        "description":"An online tool for comparing PSNR metrics of 2 images",
-        "link":"https://acedev003.github.io/PSNR/",
-        "img_link":"assets/projects/images/psnr.jpg",
         "font_color":"#fff"
     }
 ]
