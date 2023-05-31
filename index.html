@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta charset="utf-8">
         <meta name="google-site-verification" content="S2uYy4MIoWzM-wLpgVxBe6FNBNBRpy5XPewMXcDv7kY" />
         <title>Acedev003</title>
         <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
@@ -24,21 +25,48 @@
                     <div class="subtitlefont">My Projects<i class="material-icons" style="vertical-align: middle;">navigate_next</i> </div>
                 </button>
                 <div class="w3-padding w3-xlarge titleicons reveal-late">
-                    <a href="https://acedev003.github.io/Blog/" target="_blank"><i class="fa fa-book w3-margin"></i></a>
-                    <a href="https://in.linkedin.com/in/acedev003" target="_blank"><i class="fa fa-linkedin w3-margin"></i></a>
-                    <a href="https://twitter.com/Acedev003" target="_blank"><i class="fa fa-twitter w3-margin"></i></a>
-                    <a href="https://github.com/Acedev003" target="_blank"><i class="fa fa-github w3-margin"></i></a>
-                  </div>
+                    <a href="javascript:void(0)" id="about"  class="w3-tooltip"><i class="fa fa-info-circle  w3-margin"></i><span class="w3-text w3-tag w3-round-xlarge w3-animate-opacity w3-padding w3-transparent w3-small" style="position:absolute;left:-1ch;top:4ch" >About</span></a>
+                    <a href="https://acedev003.github.io/Blog/"  class="w3-tooltip" target="_blank"><i class="fa fa-book w3-margin"></i><span class="w3-text w3-tag w3-round-xlarge w3-animate-opacity w3-padding w3-transparent w3-small" style="position:absolute;left:-0.5ch;top:4ch" >Blog</span></a>
+                    <a href="https://in.linkedin.com/in/acedev003"  class="w3-tooltip w3-hide-small" target="_blank"><i class="fa fa-linkedin w3-margin"></i><span class="w3-text w3-tag w3-round-xlarge w3-animate-opacity w3-padding w3-transparent w3-small" style="position:absolute;left:-2ch;top:4ch" >LinkedIn</span></a>
+                    <a href="https://github.com/Acedev003"  class="w3-tooltip" target="_blank"><i class="fa fa-github w3-margin"></i><span class="w3-text w3-tag w3-round-xlarge w3-animate-opacity w3-padding w3-transparent w3-small" style="position:absolute;left:-1ch;top:4ch" >Github</span></a>
+                    <a href="javascript:void(0)" id="socials" class="w3-tooltip"><i class="fa fa-twitter w3-margin"></i><span class="w3-text w3-tag w3-round-xlarge w3-animate-opacity w3-padding w3-transparent w3-small" style="position:absolute;left:-1ch;top:4ch" >Socials</span></a>
+                </div>
         </div>
         
         <div class="project-panel" id="project_panel">
-
             <div class="w3-panel w3-margin w3-round-large w3-transparent w3-padding w3-display-container">
                   <div class="w3-padding w3-display-right w3-btn w3-ripple" id ="project_close"><i class="material-icons" style="vertical-align: middle;color: #fff;">close</i></div>
             </div>
-
             <div class="w3-row" id="project_holder"></div>
+        </div>
 
+        <div id="about_modal" class="w3-modal">
+            <div class="w3-modal-content">
+              <div class="w3-container w3-center w3-dark-grey">
+                <span onclick="document.getElementById('about_modal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <img src="https://media.licdn.com/dms/image/D4D03AQEXjpGg-vp8Ww/profile-displayphoto-shrink_200_200/0/1668793277258?e=1691020800&v=beta&t=QYugl-wmrPvi902nFJ_5q0RWNtmMNrPLNwH9I9lr3H4" alt="Avatar" style="width:15%" class="w3-circle w3-margin-top">
+                <h1>Hi all 👋 Ashvin here,</h1>   
+                <p>
+                    Defining myself as a curious mind that loves to code and make things work. Fascinated by things that fly , advances in machine learning  and craving to do something useful in making this planet more green. An undergraduate AI enthusiast with experience in building multiple projects across various disciplines along with conducting technical workshops on latest computational trends.
+                </p>
+              </div>
+            </div>
+        </div>
+
+        <div id="social_modal" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+              <div class="w3-container w3-center w3-dark-grey">
+                <span onclick="document.getElementById('social_modal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <p>
+                    <div class=" w3-xxlarge">
+                        <a href="https://in.linkedin.com/in/acedev003"  class="w3-tooltip" target="_blank"><i class="fa fa-linkedin w3-margin"></i><span class="w3-text w3-tag w3-round-xlarge w3-animate-opacity w3-padding w3-transparent w3-small" style="position:absolute;left:-1ch;top:5ch" >LinkedIn</span></a>
+                        <a href="https://twitter.com/acedev003" class="w3-tooltip"><i class="fa fa-twitter w3-margin"></i><span class="w3-text w3-tag w3-round-xlarge w3-animate-opacity w3-padding w3-transparent w3-small" style="position:absolute;left:0ch;top:5ch" >Twitter</span></a>
+                        <a href="https://www.instagram.com/acedev003/"  class="w3-tooltip" target="_blank"><i class="fa fa-instagram w3-margin"></i><span class="w3-text w3-tag w3-round-xlarge w3-animate-opacity w3-padding w3-transparent w3-small" style="position:absolute;left:-2ch;top:5ch" >Instagram</span></a>
+                        <a href="https://reddit.com/user/acedev003/"  class="w3-tooltip" target="_blank"><i class="fa fa-reddit w3-margin"></i><span class="w3-text w3-tag w3-round-xlarge w3-animate-opacity w3-padding w3-transparent w3-small" style="position:absolute;left:0ch;top:5ch" >Reddit</span></a>                        
+                    </div>
+                </p>
+              </div>
+            </div>
         </div>
         
         <script src="assets/js/particles.min.js"></script>

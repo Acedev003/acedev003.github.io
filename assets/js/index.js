@@ -157,6 +157,7 @@ class Table
     anchor.target = "_blank";
     anchor.style.color = font_color;
     anchor.style.height = '300px';
+    anchor.style.marginBottom = '40px';
     anchor.classList.add("w3-col","s12","m6","l4","w3-padding"); 
 
     let child = document.createElement("div");
@@ -165,7 +166,7 @@ class Table
     child.style.overflow = "hidden";
     child.style.position = "relative";
     child.style.width = "100%";
-    child.style.height = "250px";
+    child.style.height = "300px";
 
     let container = document.createElement("div");
     container.classList.add("w3-large");
@@ -228,9 +229,9 @@ let networkcall = (url) =>
                             if (xhr.status >= 200 && xhr.status < 400) 
                             {
                               let json = JSON.parse(xhr.responseText);
-                              for(let i = 0 ;i < json.length;i++)
+                              for(const element of json)
                               {
-                                table.add(json[i].title,json[i].description,json[i].link,json[i].img_link,json[i].font_color);
+                                table.add(element.title,element.description,element.link,element.img_link,element.font_color);
                               }
                               return;
                             }
@@ -282,3 +283,15 @@ let close_projects = () =>
 
 project_button.onclick = open_projects;
 project_close.onclick  = close_projects;
+
+
+let about   = document.getElementById('about');
+let socials = document.getElementById('socials');
+
+about.onclick = () =>{
+  document.getElementById('about_modal').style.display = 'block';
+};
+
+socials.onclick = () =>{
+  document.getElementById('social_modal').style.display = 'block';
+};
