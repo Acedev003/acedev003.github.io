@@ -4,7 +4,7 @@ let params = {
         "value": 80,
         "density": {
           "enable": true,
-          "value_area": 800
+          "value_area": 1800
         }
       },
       "color": {
@@ -36,7 +36,7 @@ let params = {
         }
       },
       "size": {
-        "value": 3,
+        "value": 4,
         "random": true,
         "anim": {
           "enable": true,
@@ -47,7 +47,7 @@ let params = {
       },
       "line_linked": {
         "enable": true,
-        "distance": 150,
+        "distance": 160,
         "color": "#ffffff",
         "opacity": 0.4,
         "width": 2
@@ -56,7 +56,7 @@ let params = {
         "enable": true,
         "speed": 3,
         "direction": "none",
-        "random": false,
+        "random": true,
         "straight": false,
         "out_mode": "out",
         "bounce": false,
