@@ -148,7 +148,7 @@ class Table
     parent.remove();
   }
 
-  add(title_txt,description,prj_link,img_link,font_color)
+  add(title_txt,tags,description,prj_link,img_link,font_color)
   {
     let parent     = this.#div;
 
@@ -161,25 +161,17 @@ class Table
     anchor.classList.add("w3-col","s12","m6","l4","w3-padding"); 
 
     let child = document.createElement("div");
-    child.classList.add("w3-card-4","w3-round-xlarge",);
+    child.classList.add("w3-card-4","w3-round-xlarge","w3-border-green","w3-border");
     child.style.display = "inline-block";
     child.style.overflow = "hidden";
     child.style.position = "relative";
     child.style.width = "100%";
     child.style.height = "300px";
+    child.style.backgroundColor = "#1e1e1e";
 
     let container = document.createElement("div");
     container.classList.add("w3-large");
     container.style.marginBottom = "16px";
-
-    let bg_img = document.createElement("img");
-    bg_img.src = img_link;
-    bg_img.classList.add("w3-round-xlarge");
-    bg_img.style.pointerEvents = "none";
-    bg_img.style.position = "absolute";
-    bg_img.style.height = "100%";
-    bg_img.style.width = "100%";
-    bg_img.style.zIndex = -1;
 
     let title       = document.createElement("div");
     title.innerText = title_txt;
@@ -188,14 +180,27 @@ class Table
     let br1          = document.createElement("br");
     let br2          = document.createElement("br");
 
+    let tag_bucket   = document.createElement("div");
+    tag_bucket.style.paddingLeft = "16px";
+
+    tags = tags.split('|')
+    console.log(tags)
+    for(let tag in tags)
+    {
+      let node = document.createElement("span");
+      node.innerText = tags[tag]
+      node.classList.add("w3-hover-opacity","w3-tag","w3-medium","w3-round","tag");
+      tag_bucket.appendChild(node)
+    }
+
     let subtitle       = document.createElement("p");
     subtitle.innerText = description;
     subtitle.classList.add("w3-padding");
 
-    container.appendChild(bg_img);
     container.appendChild(br1);
     container.appendChild(title);
     container.appendChild(br2);
+    container.appendChild(tag_bucket);
     container.appendChild(subtitle);
 
     child.appendChild(container);
@@ -231,7 +236,7 @@ let networkcall = (url) =>
                               let json = JSON.parse(xhr.responseText);
                               for(const element of json)
                               {
-                                table.add(element.title,element.description,element.link,element.img_link,element.font_color);
+                                table.add(element.title,element.tags,element.description,element.link,element.img_link,element.font_color);
                               }
                               return;
                             }

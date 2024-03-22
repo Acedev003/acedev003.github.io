@@ -87,6 +87,11 @@ body {
   visibility: hidden;
 }
 
+.tag
+{
+  margin: 3px; 
+}
+
 .project-panel
 {
   display: none;

@@ -1,6 +1,7 @@
 [
     {
         "title":"Digit Recognizer",
+        "tags":"tensorflow|ai",
         "description":"Webapp that recognizes handwritten digits using tfjs",
         "link":"https://acedev003.github.io/digit_recognizer/",
         "img_link":"assets/projects/images/mnist.png",
@@ -8,6 +9,7 @@
     },
     {
         "title":"ImDenoise",
+        "tags":"tensorflow|ai|image-cleaning",
         "description":"Fix and remove grains/noise artifacts from images using AI",
         "link":"https://github.com/Acedev003/ImDenoise/",
         "img_link":"assets/projects/images/imdenoise.jpg",
@@ -15,6 +17,7 @@
     },
     {
         "title":"PSNR",
+        "tags":"tools|image-metrics",
         "description":"An online tool for comparing PSNR metrics of 2 images",
         "link":"https://acedev003.github.io/PSNR/",
         "img_link":"assets/projects/images/psnr.jpg",
@@ -22,6 +25,7 @@
     },
     {
         "title":"Hexdump",
+        "tags":"tools",
         "description":"Hexdump utility for windows and linux, programmed in C",
         "link":"https://github.com/Acedev003/hexdump",
         "img_link":"assets/projects/images/hexdump.png",
@@ -29,6 +33,7 @@
     },
     {
         "title":"Flashlight with Shake",
+        "tags":"app|android",
         "description":"Access the flashlight of your device through this app, which gives you the ability to control your device's flash through a shake.",
         "link":"https://play.google.com/store/apps/details?id=com.acedevelopers.flashlight",
         "img_link":"assets/projects/images/flashlightwithshake.png",
@@ -36,6 +41,7 @@
     },
     {
         "title":"Mars Weather",
+        "tags":"app|android",
         "description":"App to get the latest weather reports from the Red planet, with data from Insight, Curiosity and Perseverance rovers.",
         "link":"https://play.google.com/store/apps/details?id=com.acedev003.marsweather",
         "img_link":"assets/projects/images/marsweather.png",
@@ -43,6 +49,7 @@
     },
     {
         "title":"URL Shortener",
+        "tags":"app|android",
         "description":"App to Shorten down large links using multiple shortening services and share URL's as simple QR codes.",
         "link":"https://play.google.com/store/apps/details?id=com.acedev003.urlshortener",
         "img_link":"assets/projects/images/urlshortener.png",
@@ -50,6 +57,7 @@
     },
     {
         "title":"Create Ascii",
+        "tags":"tools",
         "description":"Simple python module for creating cool ascii effects from images",
         "link":"https://github.com/Acedev003/create_ascii",
         "img_link":"assets/projects/images/ascii.png",
