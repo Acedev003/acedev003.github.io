@@ -1,0 +1,12 @@
+https://acedev003.github.io/
+https://acedev003.github.io/Blog/
+https://acedev003.github.io/Blog/tags
+https://acedev003.github.io/Blog/2023/03/12/Debugging-Linux-Boot-Performance.html
+https://acedev003.github.io/Blog/2023/02/18/Redesigning-Fibonacci.html
+https://acedev003.github.io/Blog/2023/01/07/Tweet-ID's-Are-More-Than-Enough.html
+https://acedev003.github.io/Blog/2022/06/29/Deploying-Acedev's-Random-Bytes.html
+https://acedev003.github.io/Resume/
+https://acedev003.github.io/digit_recognizer/
+https://acedev003.github.io/PSNR/
+https://acedev003.github.io/RockPaperScissors/
+https://acedev003.github.io/bad_apple/
