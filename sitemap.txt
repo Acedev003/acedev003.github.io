@@ -1,6 +1,7 @@
 https://acedev003.github.io/
 https://acedev003.github.io/Blog/
 https://acedev003.github.io/Blog/tags
+https://acedev003.github.io/Blog/2024/04/11/Building-a-7-Segment-Display.html
 https://acedev003.github.io/Blog/2023/03/12/Debugging-Linux-Boot-Performance.html
 https://acedev003.github.io/Blog/2023/02/18/Redesigning-Fibonacci.html
 https://acedev003.github.io/Blog/2023/01/07/Tweet-ID's-Are-More-Than-Enough.html
